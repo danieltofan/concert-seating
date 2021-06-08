@@ -1,22 +1,25 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Seating from '../views/Seating.vue'
+import Itinerary from '../views/Itinerary.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
+    // home route
     path: '/',
-    name: 'Home',
-    component: Home
+    name: 'home',
+    component: Seating
   },
   {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
+    // itinerary route to display guest info
+    path: '/itinerary/:id',
+    name: 'itinerary',
+    component: Itinerary,
+    props: (route) => ({
+      ...route.params
+    })
   }
 ]
 
