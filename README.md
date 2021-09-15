@@ -152,7 +152,7 @@ Total seated people: 40
 Total unseated people: 0
 ```
 
-The above run seated gusts by party size first.
+The above run seated guests by party size first.
 
 In another sample run (with 100 guests), and using the RSVP-first strategy, 3 seats were left empty.
 The backfill algorithm kicked in and filled those seats.
